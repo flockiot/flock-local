@@ -1,0 +1,6 @@
+dependencies:
+- name: flock
+  repository: file://../flock-base
+  version: 0.1.0
+digest: sha256:9eae2218b5ed560733b1a22554454ae3d13901f0fd8fa2f99027b0b360df96b9
+generated: "2026-02-19T19:51:36.905697401-03:00"

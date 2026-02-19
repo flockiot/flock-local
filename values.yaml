@@ -1,1 +1,74 @@
-singleBinary: true
+flock:
+  singleBinary: true
+
+  api:
+    image:
+      repository: flock-api
+      tag: latest
+      pullPolicy: Never
+    replicas: 1
+    resources:
+      requests:
+        cpu: 50m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 256Mi
+
+  ingress:
+    enabled: true
+    hosts:
+      - host: api.flock.local
+        paths:
+          - path: /
+            pathType: Prefix
+
+  apiConfig:
+    log:
+      level: "debug"
+      format: "text"
+
+  postgresql:
+    enabled: true
+    auth:
+      username: flock
+      password: flock
+      database: flock
+    primary:
+      resources:
+        requests:
+          cpu: 50m
+          memory: 128Mi
+        limits:
+          cpu: 200m
+          memory: 256Mi
+
+  redis:
+    enabled: true
+    architecture: standalone
+    master:
+      resources:
+        requests:
+          cpu: 50m
+          memory: 32Mi
+        limits:
+          cpu: 100m
+          memory: 64Mi
+
+  kafka:
+    enabled: false
+
+  clickhouse:
+    enabled: false
+
+  loki:
+    enabled: false
+
+  harbor:
+    enabled: false
+
+  minio:
+    enabled: false
+
+  zitadel:
+    enabled: false
