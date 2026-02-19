@@ -1,0 +1,10 @@
+apiVersion: v2
+name: flock-local
+description: Local development overrides for the Flock platform
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: flock
+    version: "0.1.0"
+    repository: "file://../flock-base"
