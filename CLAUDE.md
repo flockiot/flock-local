@@ -2,7 +2,7 @@
 
 Helm values overrides for running the full Flock platform locally on Docker Desktop Kubernetes (or kind/k3d).
 
-Uses flock-base as the base chart. Single-binary mode with all infrastructure subcharts enabled and configured for local development.
+Uses flock-base as the base chart. Single-binary mode with infrastructure subcharts configured for local development.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ helm install flock . -n flock --create-namespace
 
 ## What This Provides
 
-A complete local Flock environment: API (all targets), PostgreSQL, Kafka, Redis, ClickHouse, Loki, Harbor, MinIO, Zitadel — all running in your local cluster.
+A local Flock environment: API (all targets), PostgreSQL — running in your local cluster. More infrastructure added as build phases progress.
 
 ## Conventions
 

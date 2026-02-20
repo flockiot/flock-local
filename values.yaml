@@ -42,33 +42,3 @@ flock:
         limits:
           cpu: 200m
           memory: 256Mi
-
-  redis:
-    enabled: true
-    architecture: standalone
-    master:
-      resources:
-        requests:
-          cpu: 50m
-          memory: 32Mi
-        limits:
-          cpu: 100m
-          memory: 64Mi
-
-  kafka:
-    enabled: false
-
-  clickhouse:
-    enabled: false
-
-  loki:
-    enabled: false
-
-  harbor:
-    enabled: false
-
-  minio:
-    enabled: false
-
-  zitadel:
-    enabled: false
